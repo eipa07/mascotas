@@ -1,0 +1,19 @@
+<div *ngIf="producto; then siProducto else noProducto"></div>
+<ng-template #siProducto>
+    <div class="row">
+        <div class="col-lg-4" *ngIf="producto.imagen">
+                <br>
+                <img src="http://localhost/CodeIgniter/uploads/{{producto.imagen}}" class="producto_imagen">
+        </div>
+        <div class="col-lg-8">
+            <h2>{{producto.nombre}}</h2>
+            <p><strong>$ {{producto.precio}}</strong></p>
+            <p>{{producto.descripcion}}</p>
+        </div>
+    </div>
+    
+</ng-template>
+
+<ng-template #noProducto>
+    <p>Cargando Producto</p>
+</ng-template>

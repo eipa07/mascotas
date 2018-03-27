@@ -1,0 +1,50 @@
+<h3>{{titulo}}</h3>
+<hr>
+
+
+<div *ngIf="productos;then listaProductos else sinProductos"></div>
+
+<ng-template #listaProductos>
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let producto of productos">
+            <div class="thumbnail">
+                
+                
+                
+                <div *ngIf="producto.imagen; then image else noImage" class="imagen_container"></div>
+                <ng-template #image>
+                    <img src="http://localhost/CodeIgniter/uploads/{{producto.imagen}}" class="producto_imagen">
+                </ng-template>
+
+                <ng-template #noImage>
+                    <div class="imagen_relleno"></div>    
+                </ng-template>
+                        
+                
+                
+                <div class="caption">
+                    <h3>{{producto.nombre}}</h3>
+                    <p>$ {{producto.precio}} MXN</p>
+
+                    <div class="botones" *ngIf="confirmado == producto.id_producto; then siBorrar else noBorrar"></div>
+                    <ng-template #siBorrar>
+                            <a (click)="onDeleteProducto(producto.id_producto)" class="btn btn-md btn-danger">Estoy seguro</a>
+                            <a (click)="cancelarConfirm(producto.id_producto)" class="btn btn-md btn-warning">Cancelar</a>
+                    </ng-template>
+                    <ng-template #noBorrar>
+                        <p>
+                            <a [routerLink]="['/producto', producto.id_producto]" class="btn btn-md btn-primary">Ver</a>
+                            <a [routerLink]="['/editarproducto', producto.id_producto]" class="btn btn-md btn-warning">Editar</a>
+                            <a (click)="borrarConfirm(producto.id_producto)" class="btn btn-md btn-info">Borrar</a>
+                        </p>
+                    </ng-template>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #sinProductos>
+    <span>Cargando Productos</span>
+</ng-template>

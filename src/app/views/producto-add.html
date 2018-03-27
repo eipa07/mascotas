@@ -1,0 +1,32 @@
+<h3>{{titulo}}</h3>
+<hr>
+
+<form #formProducto="ngForm" id="form-producto" (ngSubmit)="onSubmit()" class="col-lg-6">
+    <label>
+        Nombre: 
+        <span *ngIf="!nombre.valid && nombre.touched" class="label label-warning" >El nombre es obligatorio</span>
+    </label>
+    <input type="text" #nombre="ngModel" name="nombre" [(ngModel)]="producto.nombre" class="form-control" required>
+
+    <label>
+        Descripcion: 
+        <span *ngIf="!descripcion.valid && descripcion.touched" class="label label-warning" >La descripcion es obligatoria</span>
+    </label>
+    <textarea #descripcion="ngModel" name="descripcion" [(ngModel)]="producto.descripcion" cols="20" rows="5" class="form-control" required></textarea>
+
+    <label>
+        Precio: : 
+        <span *ngIf="!precio.valid && precio.touched" class="label label-warning" >El precio no es correcto</span>
+    </label>
+    <input type="text" #precio="ngModel" name="precio" [(ngModel)]="producto.precio" class="form-control" required pattern="[0-9]+">
+
+    <label>Imagen: </label>
+    <div *ngIf="is_edit">
+        <br>
+        <img src="http://localhost/CodeIgniter/uploads/{{producto.imagen}}" width="60">{{producto.imagen}}
+    </div>
+    <input type="file" class="form-control" (change)="fileChangeEvent($event)">
+
+    <br>
+    <input type="submit" [disabled]="!formProducto.form.valid" value="{{titulo}}" class="btn btn-primary">
+</form>
