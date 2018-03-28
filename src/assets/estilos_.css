@@ -1,0 +1,127 @@
+body{
+    background: aliceblue !important;
+}
+
+#content{
+    margin-top: 30px;
+    border-radius: 4px; 
+    background: white;
+    box-shadow: 0px 2px 5px grey;    
+    padding: 0px;
+    overflow: hidden;
+}
+
+#header{
+    background: #255965;
+    color: white;
+    margin: 0px;
+    height: 90px;
+    line-height: 90px;
+}
+
+#headr h1{
+    display: block;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#nav{
+    padding: 0px 0px 0px 30px;
+    margin: 0px;
+    background: rgb(197, 31, 58);
+    border-radius: 16px;
+
+}
+
+#nav ul{
+    margin: 0px;
+    list-style: none;
+    padding: 0px 20px 20px 20px;
+}
+
+#nav ul li{
+    float: left;
+    margin-right: 60px;
+}
+
+#nav ul li a{
+    display: block;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 50px 0px 50px;
+
+    transition: all 300ms;
+}
+
+#nav ul li a:hover{
+    text-decoration: none;
+    background: #0bf85a;
+}
+
+.activado{
+    text-decoration: none !important;
+    border-bottom: 4px solid #32f753 !important;
+    color: white;
+    font-size: 20px;
+}
+
+#main .jumbotron{
+    padding: 50px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+#footer{
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    color: gray;
+}
+
+#form-producto label{
+    margin-top: 10px;
+}
+
+.producto_imagen {
+    max-width: 100%;
+    height: 200px;
+    margin: 0px auto;
+    display: block;
+}
+
+.imagen_relleno {
+    background: #ccc;
+    width: 100%;
+    height: 200px;
+}
+
+.imagen_container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.nheader{
+    padding: 0px 50px;
+    border: 0px solid #000;
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.nMenu {
+    flex: 1;
+}
+
+.nMenu a{
+    color: white;
+    text-decoration: none;
+}
+
+.nMenu a:hover, .nMenu a:visited{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
