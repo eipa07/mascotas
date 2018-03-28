@@ -1,221 +1,127 @@
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-family: 'Oswald', sans-serif;
-}
-
 body{
-    background: lavender !important;
+    background: aliceblue !important;
 }
 
-header{
-    width: 1000px;
-    height: 120px;
-    /*background: teal;*/
-    position: relative;
-    margin: 20px auto;   
+#content{
+    margin-top: 30px;
+    border-radius: 4px; 
+    background: white;
+    box-shadow: 0px 2px 5px grey;    
+    padding: 0px;
+    overflow: hidden;
 }
 
-#logo{
-    position: absolute;
-    top: 30px;    
-    left: 30px;
-    width: 200px;
-    height: 60px;
-    font-size: 50px;
-    text-align: center;
-    line-height: 60px;
-}
-
-.redes{
-    position: absolute;
-    width: 42px;
-    height: 42px;
-    background: #ccc;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 42px;
+#header{
+    background: #255965;
     color: white;
+    margin: 0px;
+    height: 90px;
+    line-height: 90px;
 }
 
-#icono1{
-    top: 42px;
-    right: 120px;
-    background: teal;
+#headr h1{
+    display: block;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 30px;
 }
 
-#icono2{
-    top: 42px;
-    right: 71px;
-    background: tomato;
+#nav{
+    padding: 0px 0px 0px 30px;
+    margin: 0px;
+    background: rgb(197, 31, 58);
+    border-radius: 16px;
+
 }
 
-#icono3{
-    top: 42px;
-    right: 19px;
-    background: pink;
+#nav ul{
+    margin: 0px;
+    list-style: none;
+    padding: 0px 20px 20px 20px;
 }
 
-.botones{
+#nav ul li{
     float: left;
-    margin: 0px 2px;
-    width: 196px;
-    height: 48px;
-    background: #333;
-    font-family: cursive;
+    margin-right: 60px;
+}
+
+#nav ul li a{
+    display: block;
     color: white;
-    text-align: center;
-    line-height: 48px;
-    background: grey;
-}
-
-nav{
-    position: relative;
-    margin: auto;
-    width: 1000px;
-    height: 48px;
-    /*background: teal;*/
-}
-
-#top{
-    position: relative;
-    margin: 20px auto;
-    width: 1000px;
-    height: 270px;
-}
-
-#top ul{
-    width: 1010px;
-    height: 192px;
-}
-
-#top ul li{
-    float: left;
-    width: 326px;
-    height: 192px;
-    margin-right: 10px;
-    text-align: center;
-}
-
-#top ul li img{
-    border-radius: 100%;
-    height: 100px;
-}
-
-#top ul h1{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-}
-
-#top ul p{
-    font-size: 14px;
-    width: 80%;
-    margin: 10px;
-}
-
-section{
-    position: relative;
-    margin: auto;
-    width: 1000px;
-    height: 700px;
-}
-
-aside#izq{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 200px;
-    height: 700px;    
-}
-
-aside#izq ul li{
-    background: #aaa;
-    padding: 10px;
-    margin: 2px 10px;
-    list-style-type: square;
-    list-style-position: inside;
-    list-style-image: url('../assets/img/clip.jpg');
-}
-
-
-aside#der{
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    width: 200px;
-    height: 700px;
-}
-
-aside#der h1{
-    width: 200px;
     height: 50px;
     line-height: 50px;
-    text-align: center;
-    background: grey;
+    padding: 0px 50px 0px 50px;
+
+    transition: all 300ms;
+}
+
+#nav ul li a:hover{
+    text-decoration: none;
+    background: #0bf85a;
+}
+
+.activado{
+    text-decoration: none !important;
+    border-bottom: 4px solid #32f753 !important;
     color: white;
-    margin: 0px 0px 10px 0px;
+    font-size: 20px;
 }
 
-aside#der input{
-    padding: 10px;
-    margin: 5px 0px;
-    width: 176px;
+#main .jumbotron{
+    padding: 50px;
+    margin-top: 30px;
+    border-radius: 10px;
 }
 
-
-aside#der input[type="text"]{
-    background: url('../assets/img/user.png');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
+#footer{
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    color: gray;
 }
 
-aside#der input[type="password"]{
-    background: url('../assets/img/pass.jpg');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
+#form-producto label{
+    margin-top: 10px;
 }
 
-aside#der input[type="submit"]{
-    width: 200px;
-    background: crimson;
-    border: 0;
+.producto_imagen {
+    max-width: 100%;
+    height: 200px;
+    margin: 0px auto;
+    display: block;
+}
+
+.imagen_relleno {
+    background: #ccc;
+    width: 100%;
+    height: 200px;
+}
+
+.imagen_container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.nheader{
+    padding: 0px 50px;
+    border: 0px solid #000;
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.nMenu {
+    flex: 1;
+}
+
+.nMenu a{
     color: white;
+    text-decoration: none;
 }
 
-
-article{
-    position: absolute;
-    left: 200px;
-    top: 0px;
-    width: 600px;
-    height: 700px;
-    
-}
-
-article h1{
-    font-size: 40px;
-}
-
-article p img{
-    float: left;
-    margin-right: 20px;
-}
-
-article p{
-    margin: 2px 20px;
-    font-size: 18px;
-    text-align: justify;
-}
-
-footer{
-    position: relative;
-    margin: 20px auto;
-    width: 1000px;
-    height: 70px;
-    background: #888;
-    text-align: center;
-    line-height: 70px;
+.nMenu a:hover, .nMenu a:visited{
     color: white;
+    text-decoration: none;
+    font-size: 20px;
 }
+

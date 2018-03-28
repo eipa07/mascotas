@@ -1,83 +1,63 @@
-<br>
-
-<header>
-  <div id="logo">Logotipo</div>
-
-  <div id="icono1" class="redes">X</div>
-  <div id="icono2" class="redes">X</div>
-  <div id="icono3" class="redes">X</div>
-</header>
-
-<nav>
-  <ul>
-    <li class="botones">Boton 1</li>
-    <li class="botones">Boton 2</li>
-    <li class="botones">Boton 3</li>
-    <li class="botones">Boton 4</li>
-    <li class="botones">Boton 5</li>
-  </ul>
-</nav>
 
 
-<div id="top">
-  
-  <ul>
-    <li>
-      <img src="../assets/img/img1.jpg" width="100">
-      <h1>Titulo</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut nesciunt nostrum minima ipsam doloremque optio obcaecati perferendis eum a vero blanditiis alias possimus iste, vel quia similique cum nemo officia.</p>
-    </li>
-    <li>
-      <img src="../assets/img/img2.jpg" width="100">
-      <h1>Titulo</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut nesciunt nostrum minima ipsam doloremque optio obcaecati perferendis eum a vero blanditiis alias possimus iste, vel quia similique cum nemo officia.</p>
-    </li>
-    <li>
-      <img src="../assets/img/img3.jpg" width="100">
-      <h1>Titulo</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut nesciunt nostrum minima ipsam doloremque optio obcaecati perferendis eum a vero blanditiis alias possimus iste, vel quia similique cum nemo officia.</p>
-    </li>
-  </ul>
 
-</div>
-
-<section>
-  <aside id="izq">
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-    </ul>
-  </aside>
-  <article>
-    <h1>Titulo de articulo
-      <p><img src="../assets/img/img4.jpg" width="250">  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam consectetur voluptate praesentium dolores molestiae molestias excepturi laborum at. Ipsam amet natus facere non beatae ea rem illo reprehenderit distinctio perspiciatis.</p>
-      <br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi nesciunt in necessitatibus quas nihil corrupti laboriosam ipsam sunt consequatur! Ratione fugit incidunt quas quibusdam vel, sint voluptatum in laborum esse.</p>
-
-    </h1>
-  </article>
-  <aside id="der">
-    <h1>Login</h1>
-    <form action="">
-      <input type="text" placeholder="Usuario">
-      <input type="password" placeholder="password">
-      <input type="submit" placeholder="enviar" name="Enviar">
-    </form>
-  </aside>
-</section>
-
-
-<footer>&copy; Todos los derechos reservados</footer>
-
-
+<header class="ae-container-fluid ae-container-fluid--full rk-header ">
+    <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+    <label for="mobile-menu">
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#bar"></use>
+      </svg>
+    </label>
+    <div class="ae-container-fluid rk-topbar">
+      <h1 class="rk-logo"><a href="index.html">urku portfolio<sup>tm</sup></a></h1>
+      <nav class="rk-navigation">
+        <ul class="rk-menu">
+          <li class="rk-menu__item"><a href="index.html" class="rk-menu__link">Home</a>
+          </li>
+          <li class="active rk-menu__item"><a href="portfolio.html" class="rk-menu__link">Portfolio</a>
+          </li>
+          <li class="rk-menu__item"><a href="blog.html" class="rk-menu__link">Blog</a>
+          </li>
+          <li class="rk-menu__item"><a href="#0" class="rk-menu__link">Pages</a>
+            <nav class="rk-menu__sub">
+              <ul class="rk-container">
+                <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">About</a></li>
+                <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Documentation</a></li>
+                <li class="rk-menu__item"><a href="design-styles.html" class="rk-menu__link">Design Styles</a></li>
+              </ul>
+            </nav>
+          </li>
+          <li class="rk-menu__item"><a href="contact.html" class="rk-menu__link">Contact Us</a>
+          </li>
+        </ul>
+        <form class="rk-search">
+          <input type="text" placeholder="Search" id="urku-search" class="rk-search-field">
+          <label for="urku-search">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#icon-search"></use>
+            </svg>
+          </label>
+        </form>
+      </nav>
+    </div>
+  </header>
 
 
 
 <br>
-<hr>
+<br>
+<br>
+<br>
+<br>
+  <hr>
+  <router-outlet></router-outlet>
+
 <!--
 <div id="content" class="col-lg-10 col-lg-offset-1">
 
@@ -92,12 +72,6 @@
           <article class="nMenu"><a [routerLink]="['/crearproducto']" [routerLinkActive]="['activado']">Crear producto</a></article>
           <article class="nMenu"><a [routerLink]="['/productos-list2']" [routerLinkActive]="['activado']">Productos 2</a></article>
         </section>
-    <ul>
-      <li><a [routerLink]="['/home']" [routerLinkActive]="['activado']">Home</a></li>
-      <li><a [routerLink]="['/productos']" [routerLinkActive]="['activado']">Productos</a></li>
-      <li><a [routerLink]="['/crearproducto']" [routerLinkActive]="['activado']">Crear producto</a></li>
-      <li><a [routerLink]="['/productos-list2']" [routerLinkActive]="['activado']">Productos 2</a></li>
-    </ul>
   </nav>
 
 
@@ -111,4 +85,5 @@
   </footer>
 
 
-</div>  -->
+</div>
+-->
