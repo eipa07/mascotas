@@ -14,6 +14,7 @@ import { ProductoAddComponent } from './components/producto-add.component';
 import { ProductoDetailComponent } from './components/producto-detail.component';
 import { ProductoEditComponent } from './components/producto-edit.component';
 import { ProductosList2Component } from './components/productos-list2.component';
+import { AboutComponent } from './components/about.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ProductosList2Component } from './components/productos-list2.component'
     ProductoAddComponent,
     ProductoDetailComponent,
     ProductoEditComponent,
-    ProductosList2Component
+    ProductosList2Component,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
