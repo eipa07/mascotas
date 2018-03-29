@@ -1,33 +1,32 @@
 
-        <section class="ae-container-fluid ae-container-fluid--inner rk-portfolio">
-
-           
-          
-          <div  *ngFor="let producto of productos" class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
-                <a  href="portfolio-item.html" class="rk-item ae-masonry__item">
-                    <img src="http://localhost/CodeIgniter/uploads/{{producto.imagen}}">  
-                    <div class="item-meta">
-                        <h2>{{producto.nombre}}</h2>
-                        <p>${{producto.precio}}</p>
-                        
-                    </div>
-                </a>
+<section class="ae-container-fluid ae-container-fluid--inner rk-portfolio">
+    <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
+        <div *ngFor="let producto of productos" class="rk-item ae-masonry__item">
+            <img src="http://localhost/CodeIgniter/uploads/{{producto.imagen}}">  
+            <div class="item-meta">
+                <h2>{{producto.nombre}}</h2>
+                <p>${{producto.precio}}</p>
                 <div class="botones" *ngIf="confirmado == producto.id_producto; then siBorrar else noBorrar"></div>
-                    <ng-template #siBorrar>
-                            <a (click)="onDeleteProducto(producto.id_producto)" class="btn btn-md btn-danger">Estoy seguro</a>
-                            <a (click)="cancelarConfirm(producto.id_producto)" class="btn btn-md btn-warning">Cancelar</a>
-                    </ng-template>
-                    <ng-template #noBorrar>
-                        <p>
-                            <a [routerLink]="['/producto', producto.id_producto]" class="btn btn-md btn-primary">Ver</a>
-                            <a [routerLink]="['/editarproducto', producto.id_producto]" class="btn btn-md btn-warning">Editar</a>
-                            <a (click)="borrarConfirm(producto.id_producto)" class="btn btn-md btn-info">Borrar</a>
-                        </p>
-                    </ng-template>
-                
-              
-          </div>
-        </section>
+                <ng-template #siBorrar>
+                    <p>
+                        <a (click)="onDeleteProducto(producto.id_producto)" class="btn-confirmdelete">Estoy seguro</a>
+                    </p>
+                    <br>
+                    <p>
+                        <a (click)="cancelarConfirm(producto.id_producto)" class="btn-cancel">Cancelar</a>
+                    </p>
+                </ng-template>
+                <ng-template #noBorrar>
+                    <p>
+                        <a [routerLink]="['/producto', producto.id_producto]" class="btn-ver">Ver</a>
+                        <a [routerLink]="['/editarproducto', producto.id_producto]" class="btn-editar">Editar</a>
+                        <a (click)="borrarConfirm(producto.id_producto)" class="btn-delete">Borrar</a>
+                    </p>
+                </ng-template> 
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
