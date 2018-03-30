@@ -17,6 +17,7 @@ export class ProductosList2Component {
 
     // La utilizo para el boton de borrar
     public confirmado;
+    public cargando: boolean;
 
 
     constructor(
@@ -35,12 +36,16 @@ export class ProductosList2Component {
     }
 
     getProductos() {
+        this.cargando = true;
         this._productoService.getProductos().subscribe(
             result => {
                 if (result.code !== 200) {
                     console.log(result.message);
                 } else {
+                    setTimeout(() => {
                     this.productos = result.message;
+                    this.cargando = false;
+                    }, 500);
                 }
 
             },
