@@ -15,6 +15,6 @@ export class HomeComponent {
 
     // tslint:disable-next-line:use-life-cycle-interface
     ngOnInit() {
-        console.log('HomeComponent ok');
+        // console.log('HomeComponent ok');
     }
 }

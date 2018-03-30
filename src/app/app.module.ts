@@ -16,6 +16,10 @@ import { ProductoEditComponent } from './components/producto-edit.component';
 import { ProductosList2Component } from './components/productos-list2.component';
 import { AboutComponent } from './components/about.component';
 
+// Servicios
+import { InformacionService } from './services/informacion.service';
+// Importar HttpClientModule
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,10 +37,13 @@ import { AboutComponent } from './components/about.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    HttpClientModule, // cargamos el módulo en el array de imports
+
   ],
   providers: [
-    appRoutingProviders
+    appRoutingProviders,
+    InformacionService
   ],
   bootstrap: [AppComponent]
 })
