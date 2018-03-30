@@ -23,7 +23,6 @@ export class ProductoDetailComponent {
 
     // tslint:disable-next-line:use-life-cycle-interface
     ngOnInit() {
-        console.log('Producto-details component OK!!!!!');
         this.getProducto();
     }
 
@@ -36,7 +35,6 @@ export class ProductoDetailComponent {
                 response => {
                     if (response.code === 200) {
                         this.producto = response.message[0];
-                        console.log(this.producto);
                     } else {
                         this._router.navigate(['/productos']);
                     }

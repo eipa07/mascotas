@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 import {Producto} from '../models/producto';
 import {GLOBAL} from './global';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable()
 
@@ -12,7 +13,11 @@ export class ProductoService {
     // tslint:disable-next-line:member-ordering
     public url: string;
 
-    constructor( public _http: Http ) {
+    constructor(
+        public _http: Http,
+        public _httpClient: HttpClient
+
+    ) {
         this.url = GLOBAL.url;
     }
 
@@ -22,6 +27,10 @@ export class ProductoService {
 
     getProducto(id) {
         return this._http.get(this.url + 'producto/' + id).map(res => res.json());
+    }
+
+    getProductoByName(termino) {
+        return this._httpClient.get(this.url + 'productoByName/' + termino).map(res => res);
     }
 
     addProducto(producto: Producto) {
