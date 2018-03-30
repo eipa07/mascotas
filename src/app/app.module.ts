@@ -15,11 +15,13 @@ import { ProductoDetailComponent } from './components/producto-detail.component'
 import { ProductoEditComponent } from './components/producto-edit.component';
 import { ProductosList2Component } from './components/productos-list2.component';
 import { AboutComponent } from './components/about.component';
+import { SearchComponent } from './components/search.component';
 
 // Servicios
 import { InformacionService } from './services/informacion.service';
 // Importar HttpClientModule
 import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import {HttpClientModule} from '@angular/common/http';
     ProductoDetailComponent,
     ProductoEditComponent,
     ProductosList2Component,
-    AboutComponent
+    AboutComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,6 @@ import {HttpClientModule} from '@angular/common/http';
     HttpModule,
     routing,
     HttpClientModule, // cargamos el módulo en el array de imports
-
   ],
   providers: [
     appRoutingProviders,
