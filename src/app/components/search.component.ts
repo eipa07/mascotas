@@ -37,8 +37,10 @@ export class SearchComponent {
 
             this._productoService.getProductoByName(termino).subscribe(
                 response => {
-                    if (response.code === 200) {
-                        this.productos = response.message;
+                    // tslint:disable-next-line:prefer-const
+                    let resp = response;
+                    if (resp['code'] === 200) {
+                        this.productos = response['message'];
                         console.log(this.productos);
                         this.cargando = false;
                     } else {
