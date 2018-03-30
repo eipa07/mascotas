@@ -18,6 +18,7 @@ export class ProductosList2Component {
     // La utilizo para el boton de borrar
     public confirmado;
     public cargando: boolean;
+    public producto_filtrado: Array<any>;
 
 
     constructor(
@@ -27,12 +28,14 @@ export class ProductosList2Component {
     ) {
         this.titulo = 'Lista de productos';
         this.confirmado = null;
+        this.getProductos();
+        
     }
 
     // tslint:disable-next-line:use-life-cycle-interface
     ngOnInit() {
         console.log('Componente Lista de productos OK!!!');
-        this.getProductos();
+        this.searchProducto('pan');
     }
 
     getProductos() {
@@ -76,6 +79,16 @@ export class ProductosList2Component {
 
     cancelarConfirm() {
         this.confirmado = null;
+    }
+
+
+    searchProducto(termino: string) {
+        console.log('Buscando producto...');
+        console.log(this.productos);
+
+        /*this.productos.forEach(prod => {
+            console.log(prod);
+        });*/
     }
 }
 

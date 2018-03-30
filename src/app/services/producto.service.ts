@@ -8,9 +8,7 @@ import {GLOBAL} from './global';
 @Injectable()
 
 export class ProductoService {
-    update(arg0: any): any {
-        throw new Error('Method not implemented.');
-    }
+
     // tslint:disable-next-line:member-ordering
     public url: string;
 
