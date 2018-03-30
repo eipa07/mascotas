@@ -28,8 +28,6 @@ export class AppComponent {
     getInfo() {
       this._infoService.getInfoPagina().subscribe(
           result => {
-                  console.log('desde home');
-                  console.log(result);
                   this.infoCargada = true;
                   this.info = result;
           },

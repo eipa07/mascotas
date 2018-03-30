@@ -15,6 +15,9 @@ export class InformacionService {
 
   getInfoPagina(): Observable<any> {
     return this._http.get('assets/data/info.pagina.json');
-}
+  }
 
+  getInfoAbout(): Observable<any> {
+    return this._http.get('https://webapps-79c5f.firebaseio.com/equipo.json');
+  }
 }
