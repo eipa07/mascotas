@@ -1,10 +1,18 @@
-<div class="col-lg-10 col-lg-offset-1">
-    <div class="jumbotron">
-        <h2>{{titulo}}</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, qui! Laborum, optio. Excepturi ipsum inventore sapiente eius, obcaecati incidunt ea ex quia quod delectus odit eveniet repellendus laboriosam corrupti. Esse.</p>
-        <p>
+<section class="ae-container-fluid ae-container-fluid--full">
+    <header class="rk-portfolio-cover" [ngStyle]="{
+        'background-image': 'url(http://localhost/CodeIgniter/uploads/b1.jpg)',
+        'background-position': '50% 100%',
+        'background-size': '110%'
+    }">
+        <div class="item-inside__meta" [ngStyle]="{
+            'color': 'white',
+            'padding-bottom': '80px'
+        }">
+        <h1 class="ae-u-bolder rk-portfolio-title ">{{titulo}}</h1>
+        <p class="ae-theta rk-portfolio-category">
             <a [routerLink]="['/productos']" class="btn-lg btn-success">Ver productos</a>
             <a [routerLink]="['/crearproducto']" class="btn-lg btn-primary">Agregar productos</a>
         </p>
-    </div>
-</div>
+        </div>
+    </header>
+</section>

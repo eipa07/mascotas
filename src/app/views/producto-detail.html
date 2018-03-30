@@ -1,3 +1,27 @@
+<section class="ae-container-fluid ae-container-fluid--full">
+               
+    <div class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner">
+
+        <div class="ae-grid ae-grid--collapse">
+        <div class="ae-grid__item item-lg-6" *ngIf="producto.imagen"><img src="http://localhost/CodeIgniter/uploads/{{producto.imagen}}" alt="Urku Portfolio"></div>
+        <div class="ae-grid__item item-lg-5 item-lg--offset-1 au-lg-ptp-1">
+            <h4 class="ae-u-bolder">{{producto.nombre}}</h4>
+            <p class="ae-eta">$ {{producto.precio}}</p>
+            <p class="ae-eta">{{producto.descripcion}}</p>
+        </div>
+        </div>
+        
+    </div>
+    <div class="ae-container-fluid au-pt-4 au-pb-4">
+        <div class="group-buttons"><a href="#0" class="au-mt-2 arrow-button arrow-button--right">Next Project<span class="arrow-cont">
+            <svg>
+                <use xlink:href="assets/img/symbols.svg#arrow"></use>
+            </svg></span></a></div>
+    </div>
+</section>
+
+
+<!--
 <div *ngIf="producto; then siProducto else noProducto"></div>
 <ng-template #siProducto>
     <div class="row">
@@ -17,3 +41,5 @@
 <ng-template #noProducto>
     <p>Cargando Producto</p>
 </ng-template>
+
+-->
